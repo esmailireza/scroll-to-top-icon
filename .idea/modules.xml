@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/scroll-to-top.iml" filepath="$PROJECT_DIR$/.idea/scroll-to-top.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../themes/twentytwentyfour/.idea/twentytwentyfour.iml" filepath="$PROJECT_DIR$/../../themes/twentytwentyfour/.idea/twentytwentyfour.iml" />
     </modules>
   </component>
 </project>
