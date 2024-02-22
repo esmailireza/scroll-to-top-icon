@@ -1,9 +1,12 @@
+html{
+    scroll-behavior: smooth;
+}
 #back2Top{
     width: 40px;
     line-height: 40px;
     overflow: hidden;
     z-index: 999;
-    display: block;
+    display: none;
     cursor: pointer;
     position: fixed;
     bottom: 10px;
