@@ -1,20 +1,28 @@
+<?php
 /*
 Plugin Name: scroll to top
-Plugin URL: https://wordpress.org/plugins/scroll-to-top
+Plugin URI: https://wordpress.org/plugins/scrool-top-top
 Description: پلاگین اسکرول به بالای صفحه
-Author: رضااسماعیلی
-version: 1.0.0
-Licence: GPLv2 or later
+Author: رضا اسماعیلی
+Version: 1.0.0
+Licence: GPLv2 or Later
 Author URI: http://develop-wp.local
- */
+*/
+defined('ABSPATH') || exit;
 
-defined(constant_name:'ABSPATH') || exit;
-defined('STT_PLUGIN_DIR',plugin_dir_path(file:__FILE__));
-defined('STT_PLUGIN_URL',plugin_dir_url(file:__FILE__));
+define('STT_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('STT_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-function stt_reqister-assets(){
-    wp_register_style(handle:'stt-style',plugins_url(path:'scroll-to-top/assets/css/style.css'),deps:'',ver:'1.0.0');
-    wp_enqueue_style(handle:'stt-style');
-    wp_register_script(handle:'stt-main-js',src:STT_PLUGIN_URL.'assets/js/main.js'),['jquery'],in_footer:'true',ver:'1.0.0');
-    wp_enqueue_script(handle:'stt-main-js');
+function stt_register_assets()
+{
+    wp_register_style('stt-style',plugins_url('scroll-to-top/assets/css/style.css'),'','1.0.0');
+    wp_enqueue_style('stt-style');
+    wp_register_script('stt-main-js',STT_PLUGIN_URL.'assets/js/main.js',['jquery'],'1.0.0','true');
+    wp_enqueue_script('stt-main-js');
 }
+add_action('wp_enqueue_scripts','stt_register_assets');
+include_once STT_PLUGIN_DIR.'view/front/scroll-to-top.php';
+
+
+
+
